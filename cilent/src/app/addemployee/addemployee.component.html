@@ -1,0 +1,122 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+
+
+  <body style="background-color: white;">
+  <div
+  style="background-color: rgb(70, 67, 62); height: 50px; margin:0%; padding: 10px;">
+
+  <a routerLink="/admin"
+    style="margin-left: 20px; background-color: rgb(70, 67, 62); color: #fff; height: 40px; cursor: pointer;text-decoration: none; "><b>Home</b></a>
+
+  <a routerLink="/employee"
+    style=" cursor: pointer;font-size: 16px;text-decoration: none;margin-left: 500px; background-color: rgb(70, 67, 62); color:  #fff; height: 40px; "><b>View / Manage
+      Employees</b></a>
+
+  <a routerLink="/login"
+    style=" cursor: pointer;text-decoration: none;padding-left: 500px; background-color: rgb(70, 67, 62); color: #fff; height: 40px; "><b>Logout</b></a>
+
+    </div>
+<div style="border-radius: 20px;background-color: grey; margin: 20px;" class="w3-animate-zoom">
+<div>
+  <h1 style="text-align: center;color: #fff;">Add Employee & Salary Details</h1>
+</div>
+  
+  <div style="margin-left: auto ;margin-bottom: 100px; padding-bottom: 20px; padding-top: 20px; padding-left: 50px;  ">
+    <form  action="" #userPost="ngForm" (ngSubmit)="addproduct(userPost.value)"  >
+     
+      <div 
+        style="background-color:rgb(79, 14, 85); text-align: center;width: 100%;margin-bottom: 20px;
+        padding-top: 15px;border-radius: 20px;"><a style="color: #fff; font-size: 20px; text-decoration: none;"><b>EMPLOYEE &nbsp; ENTRY</b></a></div>
+
+     <div style="display:flex; flex-direction: row;" >
+      <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">Image url :</label>
+      <input class="form-control" type="text" name="emp_img" ngModel placeholder="Enter Image URL" id="" style="width: 300px;height: 40px;">
+      <label for="image" style=" font-size: 20px; padding-right: 10px; padding-left: 300px;color: #fff;">Employee ID :</label>
+      <input class="form-control" type="number" name="empID" ngModel placeholder="Enter Employee ID" id="" style="width: 300px;height: 40px;">
+     </div>
+
+     <div style="display:flex; flex-direction: row;" > 
+      <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">First Name :</label>
+      <input class="form-control" type="text" name="empFN" ngModel placeholder="Enter First Name" id="" style="width: 300px;height: 40px;">
+      <label for="image" style="padding-left: 300px; font-size: 20px; padding-right: 10px;color: #fff;">Last Name :</label>
+      <input class="form-control" type="text" name="empLN" ngModel placeholder="Enter Last Name" id="" style="width: 300px;height: 40px;">
+     </div>
+
+     <div style="display:flex; flex-direction: row;" >  
+      <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">Date Of Birth :</label>
+      <input class="form-control" type="date" name="DOB" ngModel placeholder="Enter Date of Birth" id="" style="width: 300px;height:40px;">
+      <label for="image" style="padding-left: 250px; font-size: 20px; padding-right: 10px;color: #fff;">Father's name :</label>
+      <input class="form-control" type="text" name="Dad_name" ngModel placeholder="Enter Father's Name" id="" style="width: 300px;height:40px;">
+     </div>
+    
+    
+     <div style="display:flex; flex-direction: row;" > 
+      <label for="image" style="float: left; font-size: 20px; padding-right: 20px;color: #fff;">Mother's name :</label>
+      <input class="form-control" type="text" name="Mom_name" ngModel placeholder="Enter Mother's Name" id="" style="width: 300px;height:40px;">
+      <label for="image" style="padding-left: 250px; font-size: 20px; padding-right: 10px;color: #fff;">Address :</label>
+      <input class="form-control" type="text" name="Address" ngModel placeholder="Enter Address" id="" style="width: 300px;height:40px;margin-left: 30px;">
+     </div>
+     
+     
+     <div style="display:flex; flex-direction: row;" >
+      <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">State :</label>
+      <input class="form-control" type="text" name="State" ngModel placeholder="Enter State" id="" style="width: 300px;height:40px;">
+      <label for="image" style="padding-left: 370px; font-size: 20px; padding-right: 10px;color: #fff;">Country :</label>
+      <input class="form-control" type="text" name="Country" ngModel placeholder="Enter Country" id="" style="width: 300px;height:40px;">
+     </div>  
+    
+    
+     <div style="display:flex; flex-direction: row;" > 
+      <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">Zip / Pin :</label>
+      <input class="form-control" type="text" name="Zip_Pin" ngModel placeholder="Enter Zip or Pin code" id="" style="width: 300px;height:40px;">
+      <label for="image" style="padding-left: 330px; font-size: 20px; padding-right: 10px;color: #fff;">Number :</label>
+      <input class="form-control" type="number" name="Number" ngModel placeholder="Enter Phone Number" id="" style="width: 300px;height:40px;">
+     </div>
+    
+    
+     <div style="display:flex; flex-direction: row;" > 
+      <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">Work Location :</label>
+      <input class="form-control" type="text" name="Location" ngModel placeholder="Enter  Location" id="" style="width: 300px;height:40px;">
+      <label for="image" style="padding-left: 280px; font-size: 20px; padding-right: 10px;color: #fff;">Domain :</label>
+      <input class="form-control" type="text" name="Domain" ngModel placeholder="Enter Domain" id="" style="width: 300px;height:40px;">
+     </div> 
+    
+     <div class="navbar  "
+       style="background-color: rgb(79, 14, 85); text-align: center;padding-top: 10px;border-radius: 20px;
+       margin-top: 30px;"><a style="color: #ffffff; font-size: 20px; text-decoration: none;">SALARY &nbsp; ENTRY</a></div>
+    
+     <div style="display:flex; flex-direction: row;" >   
+       <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">Basic Pay :</label>
+       <input class="form-control" type="number" name="bsalary" ngModel placeholder="Enter Basic Pay" id="" style="width: 300px;height:40px;">
+       <label for="image" style="padding-left: 340px; font-size: 20px; padding-right: 10px;color: #fff;">HRA :</label>
+       <input class="form-control" type="number" name="hra" ngModel placeholder="House Rent Allowance" id="" style="width: 300px;height:40px;">
+     </div>
+    
+    
+    <div style="display:flex; flex-direction: row;" >   
+      <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">DA :</label>
+      <input class="form-control" type="number" name="da" ngModel placeholder="Dearness Allowance " id="" style="width: 300px;height:40px;">
+      <label for="image" style="padding-left: 300px; font-size: 20px; padding-right: 10px;color: #fff;">Special Allowances :</label>
+      <input class="form-control" type="number" name="spcl" ngModel placeholder="Special Allowances" id="" style="width: 300px;height:40px;">
+    </div>
+    
+    
+    <div style="display:flex; flex-direction: row;" >   
+      <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">PF :</label>
+      <input class="form-control" type="number" name="pf" ngModel placeholder="Provident Fund Deduction " id="" style="width: 300px;height:40px;">
+      <label for="image" style="padding-left: 380px; font-size: 20px; padding-right: 10px;color: #fff;">Taxations :</label>
+      <input class="form-control" type="number" name="tax" ngModel placeholder="Income Tax Deduction" id="" style="width: 300px;height:40px;">
+    </div>  
+      
+      <button class="form-control col-lg-6" type="submit" style="  margin-top:50px;background-color: green; color: aliceblue;width: 100px;height: 50px;margin-left: 570px;cursor: pointer;"> Add </button>
+    </form>
+  </div >
+</div>
+  <div class="text-center p-4" id="XYZ">
+    © 2022 Copyright :
+    <a class="text fw-bold"  style="color: #ffffff; text-decoration: none;">CTS &nbsp; DX050 &nbsp; Team 4 </a>
+  </div>
+</body>

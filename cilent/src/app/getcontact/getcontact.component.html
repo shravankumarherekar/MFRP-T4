@@ -1,0 +1,40 @@
+<body style="background-color: white" class="w3-animate-top">
+
+    <div
+    style="background-color: rgb(70, 67, 62); height: 50px; margin: 0%; padding: 10px;">
+    
+    <a routerLink="/admin"
+      style="margin-left: 20px; background-color: rgb(70, 67, 62); color:  whitesmoke; height: 40px; cursor: pointer;text-decoration: none; "><b>Home</b></a>
+    
+    <a routerLink="/employee"
+      style=" cursor: pointer;text-decoration: none;margin-left: 500px; background-color: rgb(70, 67, 62); color:  whitesmoke; height: 40px; "><b>View
+        Employees</b></a>
+    
+    <a routerLink="/login"
+      style=" cursor: pointer;text-decoration: none;padding-left: 500px; background-color: rgb(70, 67, 62); color:  whitesmoke; height: 40px; "><b>Logout</b></a>
+    
+      </div>
+
+
+
+    <div class="container2" *ngFor="let item of (response|async)">
+        <div class="Mobile1 col-md-7">
+            <h3> From : {{item.Name}}</h3>
+            <h3>Employee ID : {{item.ID}}</h3>
+
+        </div>
+        <div class="Ptag">
+            <ul class="price">
+
+                <h3>Message : <h4>{{item.Msg}}</h4></h3>
+
+            </ul>
+        </div>
+        <i (click)="delconcern(item._id)" class="fa fa-trash" style="font-size: 40px;color: red;cursor: pointer;"></i>
+    </div>
+
+    <div class="text-center p-4" id="XYZ">
+        © 2022 Copyright :
+        <a class="text fw-bold"  style="color: #ffffff; text-decoration: none;">CTS &nbsp; DX050 &nbsp; Team 4 </a>
+      </div>
+</body>

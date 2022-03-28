@@ -1,0 +1,11 @@
+tbody tr :hover{
+    background-color: rgb(89, 139, 172);
+}
+
+#XYZ{
+    height: 60px;
+    background-color: rgb(70, 67, 62);
+    color: #ffffff;
+    font-size: 20px;
+    padding: 20px;
+}

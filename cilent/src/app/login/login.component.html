@@ -1,0 +1,55 @@
+
+<body style="background-color: #fff;" class="w3-animate-right">
+<div class="container"  >
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">,
+                    <h1>Login</h1>
+                    <h6 style="color: #ffffff;">Please enter your details !!</h6>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <p [ngClass]="{'is-invalid': isSubmitted && formControls['Mail'].errors}">
+                            <input type="email" class="form-control" placeholder="Enter your Email id" formControlName="Mail">
+                          </p>
+                          <div *ngIf="isSubmitted && formControls['Mail'].errors" class="help-block">
+                            <div *ngIf="formControls['Mail'].errors['required']" style="color: red;"> *Email is required</div>
+                         </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <p [ngClass]="{'is-invalid': isSubmitted && formControls['Password'].errors}">
+                            <input type="password" class="form-control" placeholder="Enter your Password" formControlName="Password">
+                          </p>
+                          <div *ngIf="isSubmitted && formControls['Password'].errors" class="help-block">
+                            <div *ngIf="formControls['Password'].errors['required']" style="color: red;"> *Password is required</div>
+                         </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputRole">Role</label>
+                            <p [ngClass]="{'is-invalid': isSubmitted && formControls['Role'].errors}">
+                              <select  class="exampleInputRole form-control" id="exampleInputRole" placeholder="Choose your Role" formControlName="Role">
+                                  <option value="admin" type="text">Admin</option>
+                                  <option value="employee" type="text">Employee</option>
+                              </select>
+                            </p>
+                            <div *ngIf="isSubmitted && formControls['Role'].errors" class="help-block">
+                              <div *ngIf="formControls['Role'].errors['required']" style="color: red;"> *Role is required</div>
+                           </div>
+                          </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+    
+                </form>
+                <br><a routerLink="/signup">New User ? Click here to register !!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center p-4" id="XYZ">
+  © 2022 Copyright :
+  <a class="text fw-bold"  style="color: #ffffff; text-decoration: none;">CTS &nbsp; DX050 &nbsp; Team 4 </a>
+</div>
+</body>

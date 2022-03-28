@@ -1,0 +1,88 @@
+<body>
+  <div
+    class="navbar"
+    id="navbar"
+    style="
+      background: linear-gradient(120deg, #0cf9e5, #5a84eb);
+      width: 100%;
+      margin-top: 0%;
+      margin-left: 0;
+      padding-right: 15px;
+      padding: 20px;
+    "
+  >
+    <a
+      routerLink="home"
+      style="
+        font-size: 18px;
+        margin-left: 20px;
+        color: #fff;
+        height: 40px;
+        cursor: pointer;
+        text-decoration: none;
+      "
+      ><i class="fas fa-home">&nbsp;</i><b>Home</b></a
+    >
+
+    <a
+      routerLink="about"
+      style="
+        font-size: 18px;
+        margin-left: 150px;
+        color: #fff;
+        height: 40px;
+        cursor: pointer;
+        text-decoration: none;
+      "
+      ><b>About </b></a
+    >
+
+    <a
+      routerLink="contact"
+      style="
+        font-size: 18px;
+        margin-left: 150px;
+        color: #fff;
+        height: 40px;
+        cursor: pointer;
+        text-decoration: none;
+      "
+      ><b>Contact Us</b></a
+    >
+
+    <div class="dropdown" style="display: inline-flex; overflow: visible">
+      <button
+        class="btn btn-primary dropdown-toggle"
+        data-toggle="dropdown"
+        style="
+          font-size: 18px;
+          margin-left: 500px;
+          display: inline-flex;
+          background: linear-gradient(120deg, #0cf9e5, #5a84eb);
+          border: linear-gradient(120deg, #0cf9e5, #5a84eb);
+          color: #fff;
+          text-decoration: none;
+        "
+      >
+        <i class="fas fa-user-circle">&nbsp;</i><b>Account</b>
+        <span class="caret" style="margin-left: 5px; margin-top: 10px"></span>
+      </button>
+      <ul class="dropdown-menu" style="margin-left: 500px">
+        <li>
+          <a
+            routerLink="login"
+            style="cursor: pointer; text-decoration: none; border-radius: 20px"
+            ><b>Login</b></a
+          >
+        </li>
+        <li>
+          <a routerLink="signup" style="cursor: pointer; text-decoration: none"
+            ><b>Sign up</b></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+<router-outlet></router-outlet>

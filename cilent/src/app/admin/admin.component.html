@@ -1,0 +1,125 @@
+<body>
+  <div
+    class="container"
+    style="
+      background-color: rgb(70, 67, 62);
+      height: 50px;
+      margin: 0%;
+      padding: 10px;
+    "
+  >
+    <a
+      style="
+        margin-left: 20px;
+        background-color: rgb(70, 67, 62);
+        color: whitesmoke;
+        height: 40px;
+        cursor: pointer;
+        text-decoration: none;
+      "
+      ><b>Dashboard</b></a
+    >
+
+    <a
+      style="
+        color: #fff;
+        padding-left: 400px;
+        font-size: 20px;
+        text-decoration: none;
+      "
+    >
+      WELCOME &nbsp; TO &nbsp; THE &nbsp; ADMIN &nbsp; PORTAL
+    </a>
+
+    <div class="dropdown" style="display: inline-flex">
+      <button
+        class="btn btn-primary dropdown-toggle"
+        data-toggle="dropdown"
+        style="
+          margin-left: 80px;
+          background-color: rgb(70, 67, 62);
+          border-color: rgb(70, 67, 62);
+          color: whitesmoke;
+          text-decoration: none;
+          overflow: hidden;
+        "
+      >
+        <i class="fas fa-bell" style="color: #fff; padding-right: 5px"></i
+        ><b>Notifications</b>
+        <span class="caret" style="margin-left: 5px"></span>
+      </button>
+      <ul class="dropdown-menu" style="margin-left: 200px">
+        <li>
+          <a
+            class="dropdown-item"
+            routerLink="/getcontact"
+            style="cursor: pointer; text-decoration: none"
+            ><b>Employee Requests</b></a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            routerLink="/getuserrequest"
+            style="cursor: pointer; text-decoration: none"
+            ><b>Contact Requests</b></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <aside>
+    <img
+      class="images"
+      src="https://th.bing.com/th/id/R.1b7431368e8cfdfc076ec14c38c054f9?rik=TPIsszR%2feDowBw&riu=http%3a%2f%2fsbrecommend.com%2fwp-content%2fuploads%2f2018%2f07%2fpayroll-peo.jpg&ehk=MpHgD6JMIN6%2b8%2fO%2f%2fYg8%2feplygSyu2eFMZz0JXdOeZ0%3d&risl=&pid=ImgRaw&r=0"
+      height="500px"
+      width="700px"
+    />
+  </aside>
+
+  <div>
+    <nav class="menu">
+      <input
+        type="checkbox"
+        href="#"
+        class="menu-open"
+        name="menu-open"
+        id="menu-open"
+      />
+      <label class="menu-open-button" for="menu-open">
+        <span class="lines line-1"></span>
+        <span class="lines line-2"></span>
+        <span class="lines line-3"></span>
+      </label>
+
+      <a routerLink="/addemployee" class="menu-item blue">Add </a>
+      <a routerLink="/employee" class="menu-item green">Manage</a>
+      <a routerLink="/salary" class="menu-item red"> Salary</a>
+      <a routerLink="/login" class="menu-item purple">Logout</a>
+      <a routerLink="/about" class="menu-item lightblue">About</a>
+      <a routerLink="/admin" class="menu-item orange">Home</a>
+    </nav>
+  </div>
+
+  <script style="background-color: aqua">
+    (function () {
+      var $body = document.body,
+        $menu_trigger = $body.getElementsByClassName("menu-trigger")[0];
+
+      if (typeof $menu_trigger !== "undefined") {
+        $menu_trigger.addEventListener("click", function () {
+          $body.className =
+            $body.className == "menu-active" ? "" : "menu-active";
+        });
+      }
+    }.call(this));
+  </script>
+
+  <div class="text-center p-4" id="XYZ">
+    © 2022 Copyright :
+    <a class="text fw-bold" style="color: #ffffff; text-decoration: none"
+      >CTS &nbsp; DX050 &nbsp; Team 4
+    </a>
+  </div>
+</body>

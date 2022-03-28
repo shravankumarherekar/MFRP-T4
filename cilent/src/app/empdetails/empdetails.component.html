@@ -1,0 +1,44 @@
+<body style="background-color: white;" class="w3-animate-zoom">
+    <div 
+        style="background-color: rgb(70, 67, 62); height: 50px; margin: 0%; padding: 10px;">
+        <a routerLink="/login"
+            style=" cursor: pointer;text-decoration: none;margin-left: 600px; background-color: rgb(70, 67, 62); color:  whitesmoke; height: 40px; "><b>Logout</b></a>
+</div>
+
+
+
+<div class="container">
+
+    <div class="container2" *ngFor="let item of pdt" style="margin-top: 30px;">
+        <div class="Mobile1 col-md-7">
+            <div class="container3">
+            <img src="{{item.emp_img}}" width="250px" height="160px" style="margin-left: 100px;"><br>
+            <h1 class="title">{{item.empFN}} &nbsp; {{item.empLN}}</h1>
+            <h3 style="text-align: center;">Employee ID : <b>{{item.empID}}</b></h3>
+            <h3 style="text-align: center;">Salary : <b>{{item.bsalary + item.hra + item.da + item.spcl - item.pf - item.tax}}</b></h3>
+        </div>
+        </div>
+        <div class="Ptag">
+            <ul class="price">
+
+                <li>Date of Birth : <b>{{item.DOB}}</b></li>
+                <li>Father's Name : <b>{{item.Dad_name}}</b></li>
+                <li>Mother's Name : <b>{{item.Mom_name}}</b></li>
+                <li>Address : <b>{{item.Address}}</b></li>
+                <li>State : <b>{{item.State}}</b></li>
+                <li>Country : <b>{{item.Country}}</b></li>
+                <li>Zip_Pin : <b>{{item.Zip_Pin}}</b></li>
+                <li>Number : <b>{{item.Number}}</b></li>
+                <li>Location : <b>{{item.Location}}</b></li>
+                <li>Domain : <b>{{item.Domain}}</b></li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+    <div class="text-center p-4" id="XYZ">
+        © 2022 Copyright :
+        <a class="text fw-bold"  style="color: #ffffff; text-decoration: none;">CTS &nbsp; DX050 &nbsp; Team 4 </a>
+      </div>
+</body>

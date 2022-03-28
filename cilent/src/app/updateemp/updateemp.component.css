@@ -1,0 +1,14 @@
+#XYZ{
+    height: 60px;
+    background-color: rgb(70, 67, 62);
+    color: #ffffff;
+    font-size: 20px;
+    padding: 20px;
+}
+
+div{
+    padding: 20px;
+}
+input{
+    border-radius: 20px;
+}

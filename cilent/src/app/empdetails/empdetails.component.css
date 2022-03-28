@@ -1,0 +1,58 @@
+.container2{
+    display: flex;
+    margin-left: 80px;
+    height: 550px;
+    margin-bottom: 30px;
+    padding-top: 100px;
+}
+
+.Mobile1{
+    width:70%;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+.Ptag{
+     width:50%;
+     list-style-type: none;
+     margin-top: 10px;
+}
+
+.price{
+    font-size: 20px;
+    
+    
+}
+
+#XYZ{
+    height: 60px;
+    background-color: rgb(70, 67, 62);
+    color: #ffffff;
+    font-size: 20px;
+    padding: 20px;
+}
+li{
+    list-style: none;
+}
+.container{
+    width: 80%;
+    background-color: aquamarine;
+    box-shadow: #333;
+    border-radius: 20px;
+    border-style: inset;
+   margin-top: 20px;
+   margin-bottom: 20px;
+  
+}
+
+.container3{
+    border-radius: 20px;
+    border-style: outset;
+    padding:30px
+}
+.title{
+    text-align: center;
+}

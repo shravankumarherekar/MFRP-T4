@@ -1,0 +1,159 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+
+<body style="background-color: white;" class="w3-animate-zoom">
+
+<div 
+    style="background-color: rgb(70, 67, 62); height: 50px; margin: 0%; padding: 10px;">
+
+    <a routerLink="/admin"
+        style="margin-left: 20px; background-color: rgb(70, 67, 62); color:  whitesmoke; height: 40px; cursor: pointer;text-decoration: none; "><b>Home</b></a>
+
+    <a routerLink="/employee"
+        style=" cursor: pointer;text-decoration: none;margin-left: 500px; background-color: rgb(70, 67, 62); color:  whitesmoke; height: 40px; "><b>View
+            Employees</b></a>
+
+    <a routerLink="/login"
+        style=" cursor: pointer;text-decoration: none;padding-left: 500px; background-color: rgb(70, 67, 62); color:  whitesmoke; height: 40px; "><b>Logout</b></a>
+
+        </div>
+
+
+
+<div style="border-radius: 20px;background-color: grey; margin: 20px;" >
+
+<div>
+    <h1 style="text-align: center;color: #fff;">Update Employee & Salary Details</h1>
+</div>
+
+<div style="margin-bottom: 100px;  padding-top: 20px; padding-left: 50px;  ">
+ <form class="" action="" [formGroup]="editPdt"
+    (ngSubmit)="update()">
+
+    <div 
+        style="background-color: rgb(79, 14, 85);border-radius: 20px; text-align: center;padding-top: 10px; margin-bottom: 20px;">
+        <a style="color: #ffffff; font-size: 20px; text-decoration: none;">EMPLOYEE &nbsp; UPDATE</a>
+    </div>
+     
+     
+    <div style="margin-left: auto;display:flex; flex-direction: row;" class="form-group">
+        <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">Image url :</label>
+        <input type="text" class="form-control" formControlName="emp_img" placeholder="Enter Image URL"
+            style="width: 300px;height: 30px;">
+        <label for="image" style=" font-size: 20px; padding-right: 10px; padding-left: 300px;color: #fff;">Employee ID :</label>
+        <input type="number" class="form-control" formControlName="empID" placeholder="Enter Employee ID"
+            style="width: 300px;height: 30px;">
+    </div>
+
+    <div style="display:flex; flex-direction: row;" >
+        <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">First Name :</label>
+        <input type="text" class="form-control" formControlName="empFN" placeholder="Enter First Name"
+            style="width: 300px;height: 30px;">
+        <label for="image" style="padding-left: 300px; font-size: 20px; padding-right: 10px;color: #fff;">Last Name :</label>
+        <input type="text" class="form-control" formControlName="empLN" placeholder="Enter Last Name"
+            style="width: 300px;height: 30px;">
+    </div>
+
+    <div style="display:flex; flex-direction: row;" >
+        <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">Date Of Birth :</label>
+        <input type="date" class="form-control" formControlName="DOB" placeholder="Enter Date of Birth"
+            style="width: 300px;height: 30px;">
+        <label for="image" style="padding-left: 250px; font-size: 20px; padding-right: 10px;color: #fff;">Father's name :</label>
+        <input type="text" class="form-control" formControlName="Dad_name" placeholder="Enter Father's name"
+            style="width: 300px;height: 30px;">
+    </div>
+
+
+    <div style="display:flex; flex-direction: row;" >
+        <label for="image" style="float: left; font-size: 20px; padding-right: 20px;color: #fff;">Mother's name :</label>
+        <input type="text" class="form-control" formControlName="Mom_name" placeholder="Enter Mother's name"
+            style="width: 300px;height: 30px;">
+        <label for="image" style="padding-left: 250px; font-size: 20px; padding-right: 10px;color: #fff;">Address :</label>
+        <input type="text" class="form-control" formControlName="Address" placeholder="Enter Address"
+            style="width: 300px;height: 30px;">
+    </div>
+
+
+    <div style="display:flex; flex-direction: row;" >
+        <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">State :</label>
+        <input type="text" class="form-control" formControlName="State" placeholder="Enter State "
+            style="width: 300px;height: 30px;">
+        <label for="image" style="padding-left: 370px; font-size: 20px; padding-right: 10px;color: #fff;">Country :</label>
+        <input type="text" class="form-control" formControlName="Country" placeholder="Enter Country "
+            style="width: 300px;height: 30px;">
+    </div>
+
+
+    <div style="display:flex; flex-direction: row;" >
+        <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">Zip / Pin :</label>
+        <input type="text" class="form-control" formControlName="Zip_Pin" placeholder="Enter Pin or Zip code "
+            style="width: 300px;height: 30px;">
+        <label for="image" style="padding-left: 330px; font-size: 20px; padding-right: 10px;color: #fff;">Number :</label>    
+        <input type="number" class="form-control" formControlName="Number" placeholder="Enter Phone Number "
+            style="width: 300px;height: 30px;">
+    </div>
+
+
+
+    <div style="display:flex; flex-direction: row;" >
+        <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">Work Location :</label>
+        <input type="text" class="form-control" formControlName="Location" placeholder="Enter job Location "
+            style="width: 300px;height: 30px;">
+        <label for="image" style="padding-left: 280px; font-size: 20px; padding-right: 10px;color: #fff;">Domain :</label>
+        <input type="text" class="form-control" formControlName="Domain" placeholder="Enter Domain"
+            style="width: 300px;height: 30px;">
+    </div>
+
+
+    <div 
+       style="background-color: rgb(79, 14, 85); text-align: center;padding-top: 10px;margin-top: 30px;
+       border-radius: 20px;margin-bottom: 20px;">
+       <a style="color: #ffffff; font-size: 20px; text-decoration: none;">SALARY &nbsp; UPDATE</a></div>
+        
+       
+       
+    <div style="display:flex; flex-direction: row;" >  
+        <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">Basic Pay :</label>
+        <input type="number" class="form-control" formControlName="bsalary" placeholder="Enter new Basic Pay"
+            style="width: 300px;height: 30px;">
+        <label for="image" style="padding-left: 340px; font-size: 20px; padding-right: 10px;color: #fff;">HRA :</label>
+        <input type="number" class="form-control" formControlName="hra" placeholder="New House Rent Allowance"
+            style="width: 300px;height: 30px;">
+    </div>
+
+
+    <div style="display:flex; flex-direction: row;" >
+        <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">DA :</label>
+        <input type="number" class="form-control" formControlName="da" placeholder="New Dearness Allowance"
+            style="width: 300px;height: 30px;">
+        <label for="image" style="padding-left: 300px; font-size: 20px; padding-right: 10px;color: #fff;">Special Allowances :</label>    
+        <input type="number" class="form-control" formControlName="spcl" placeholder="New Special Allowance"
+            style="width: 300px;height: 30px;">
+    </div>
+
+
+    <div style="display:flex; flex-direction: row;" >
+        <label for="image" style="float: left; font-size: 20px; padding-right: 10px;color: #fff;">PF :</label>
+        <input type="number" class="form-control" formControlName="pf" placeholder="Provident Fund"
+            style="width: 300px;height: 30px;">
+        <label for="image" style="padding-left: 380px; font-size: 20px; padding-right: 10px;color: #fff;">Taxations :</label>
+        <input type="number" class="form-control" formControlName="tax" placeholder="Tax Deductions"
+            style="width: 300px;height: 30px;">
+    </div>
+
+
+
+        <button type="submit" class="form-control"
+            style="background-color: green; color: aliceblue;width: 100px;height: 40px;margin-left: 100px;margin-top: 50px;margin-left: 570px;cursor: pointer;">Update</button>
+ </form>
+</div>
+</div>
+
+<div class="text-center p-4" id="XYZ">
+    © 2022 Copyright :
+    <a class="text fw-bold"  style="color: #ffffff; text-decoration: none;">CTS &nbsp; DX050 &nbsp; Team 4 </a>
+  </div>
+
+</body>

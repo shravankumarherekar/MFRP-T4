@@ -1,0 +1,67 @@
+<body style="background-color: white;" class="w3-animate-bottom">
+
+    <div 
+    style="background-color: rgb(70, 67, 62); height: 50px; margin: 0%; padding: 10px;">
+    
+    <a routerLink="/emphome"
+      style="margin-left: 20px; background-color: rgb(70, 67, 62); color:  whitesmoke; height: 40px; cursor: pointer;text-decoration: none; "><b>Home</b></a>
+    
+    <a routerLink="/onlyemployee"
+      style=" cursor: pointer;text-decoration: none;margin-left: 500px; background-color: rgb(70, 67, 62); color:  whitesmoke; height: 40px; "><b>View
+        Employees</b></a>
+    
+    <a routerLink="/login"
+      style=" cursor: pointer;text-decoration: none;padding-left: 500px; background-color: rgb(70, 67, 62); color:  whitesmoke; height: 40px; "><b>Logout</b></a>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    <h1 style="text-align: center; margin-bottom: 30px;margin-top: 30px;">Salary Details :- </h1>
+    
+    
+    
+    <div class="container" style="margin-top: 30px; margin-left: 90px;">
+        <nav class="navbar" >
+          <input  type="text" class="closebtn" name="empID" #pdt [(ngModel)]="empID"  placeholder="Enter Employee ID to Search" style="width: 300px; height: 30px;">
+        </nav>
+    
+        <table class="table" style="width: 1200px; border: 2px solid black;max-width: 90%; margin-bottom: 60px;">
+          <thead style="border: 1px solid black;border-bottom: 1px solid #333333 ;">
+            <tr style="background-color: blueviolet;color: #FFFFFF;">
+              <th style="border-left: 1px solid #333333 ;border-bottom: 1px solid #333333 ;text-align: center; padding: 20px;"> EMPLOYEE<br>ID </th>
+              <th style="border-left: 1px solid #333333 ;border-bottom: 1px solid #333333 ;text-align: center; padding: 20px;">NAME</th>
+              <th style="border-left: 1px solid #333333 ;border-bottom: 1px solid #333333 ;text-align: center; padding: 20px;"> BASIC <br> PAY</th>
+              <th style="border-left: 1px solid #333333 ;border-bottom: 1px solid #333333 ;text-align: center; padding: 20px;">HOUSE <br> RENT <br> ALLOWANCE </th>
+              <th style="border-left: 1px solid #333333 ;border-bottom: 1px solid #333333 ;text-align: center; padding: 20px;">DEARNESS <br>ALLOWANCE</th>
+              <th style="border-left: 1px solid #333333 ;border-bottom: 1px solid #333333 ;text-align: center; padding: 20px;">SPECIAL <br>ALLOWANCE</th>
+              <th style="border-left: 1px solid #333333 ;border-bottom: 1px solid #333333 ;text-align: center; padding: 20px;">PROVIDENT <br> FUND</th>
+              <th style="border-left: 1px solid #333333 ;border-bottom: 1px solid #333333 ;text-align: center; padding: 20px;">INCOME <br> TAX</th>
+              <th style="border-left: 1px solid #333333 ;border-bottom: 1px solid #333333 ;text-align: center; padding: 20px;">NET <br>SALARY</th>
+            </tr>
+          </thead>
+      
+          <tbody style="background-color: #FFFFFF ;" >
+              <tr *ngFor="let obj of (response|async)|filter:empID" style="height: 50px; text-align: center; padding: 10px;">         
+                <td style="border-left: 1px solid #333333;font-weight: 600;border-bottom: 1px solid #333333 ;">{{ obj.empID }}</td>
+                <td style="border-left: 1px solid #333333 ;font-weight: 600;border-bottom: 1px solid #333333 ;"> {{ obj.empFN}}  {{ obj.empLN }}</td>     
+                <td style="border-left: 1px solid #333333 ;font-weight: 600;border-bottom: 1px solid #333333 ;">{{ obj.bsalary }}</td>
+                <td style="border-left: 1px solid #333333 ;font-weight: 600;border-bottom: 1px solid #333333 ;">{{ obj.hra }}</td>
+                <td style="border-left: 1px solid #333333 ;font-weight: 600;border-bottom: 1px solid #333333 ;">{{ obj.da }}</td>
+                <td style="border-left: 1px solid #333333 ;font-weight: 600;border-bottom: 1px solid #333333 ;">{{ obj.spcl }}</td>
+                <td style="border-left: 1px solid #333333 ;font-weight: 600;border-bottom: 1px solid #333333 ;">{{ obj.pf }}</td>
+                <td style="border-left: 1px solid #333333 ;font-weight: 600;border-bottom: 1px solid #333333 ;">{{ obj.tax }}</td>
+                <td  style="border-left: 1px solid #333333 ;font-weight: 600;border-bottom: 1px solid #333333 ;">{{obj.bsalary + obj.hra + obj.da + obj.spcl - obj.pf - obj.tax}}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="text-center p-4" id="XYZ">
+        © 2022 Copyright :
+        <a class="text fw-bold"  style="color: #ffffff; text-decoration: none;">CTS &nbsp; DX050 &nbsp; Team 4 </a>
+      </div>
+    </body>
